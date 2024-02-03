@@ -1,0 +1,163 @@
+[debug] [2024-02-03T15:15:47.092Z] ----------------------------------------------------------------------
+[debug] [2024-02-03T15:15:47.100Z] Command:       /Users/aleks/.nvm/versions/node/v21.5.0/bin/node /Users/aleks/.nvm/versions/node/v21.5.0/bin/firebase init
+[debug] [2024-02-03T15:15:47.100Z] CLI Version:   13.1.0
+[debug] [2024-02-03T15:15:47.100Z] Platform:      darwin
+[debug] [2024-02-03T15:15:47.100Z] Node Version:  v21.5.0
+[debug] [2024-02-03T15:15:47.100Z] Time:          Sat Feb 03 2024 07:15:47 GMT-0800 (Pacific Standard Time)
+[debug] [2024-02-03T15:15:47.101Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-03T15:15:47.137Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-03T15:15:47.138Z] > authorizing via signed-in user (aleks@olo.land)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/aleks
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-02-03T15:15:49.813Z] Using project from CLI flag: ololand2
+[debug] [2024-02-03T15:15:49.814Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 [none]
+[debug] [2024-02-03T15:15:50.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 200
+[debug] [2024-02-03T15:15:50.284Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 {"projectId":"ololand2","projectNumber":"1081382661331","displayName":"ololand2","name":"projects/ololand2","resources":{"hostingSite":"ololand2","realtimeDatabaseInstance":"ololand2-default-rtdb"},"state":"ACTIVE","etag":"1_e7cdfa58-d694-45cd-a3d5-85af89702711"}
+[info] i  Using project ololand2 (ololand2) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-02-03T15:15:50.292Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-02-03T15:15:50.292Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:15:50.855Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firebasedatabase.googleapis.com 200
+[debug] [2024-02-03T15:15:50.855Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-02-03T15:15:50.856Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/ololand2/locations/-/instances/ololand2-default-rtdb [none]
+[debug] [2024-02-03T15:15:51.264Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/ololand2/locations/-/instances/ololand2-default-rtdb 200
+[debug] [2024-02-03T15:15:51.265Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/ololand2/locations/-/instances/ololand2-default-rtdb {"name":"projects/1081382661331/locations/us-central1/instances/ololand2-default-rtdb","project":"projects/1081382661331","databaseUrl":"https://ololand2-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-02-03T15:15:51.267Z] >>> [apiv2][query] GET https://ololand2-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-02-03T15:15:51.490Z] <<< [apiv2][status] GET https://ololand2-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-02-03T15:15:51.490Z] <<< [apiv2][body] GET https://ololand2-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] ✔  Database Rules for ololand2-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-02-03T15:15:51.516Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firestore.googleapis.com [none]
+[debug] [2024-02-03T15:15:51.516Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firestore.googleapis.com x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:15:51.793Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firestore.googleapis.com 200
+[debug] [2024-02-03T15:15:51.793Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/firestore.googleapis.com [omitted]
+[debug] [2024-02-03T15:15:51.794Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default) [none]
+[debug] [2024-02-03T15:15:52.213Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default) 200
+[debug] [2024-02-03T15:15:52.213Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default) {"name":"projects/ololand2/databases/(default)","uid":"f27d5f18-7152-4eb5-86de-932a0b4fdb3f","createTime":"2024-02-03T15:15:21.333107Z","updateTime":"2024-02-03T15:15:21.333107Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-02-03T15:15:21.333107Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IL3ksKK7j4QDMPOS1pO7j4QD"}
+[debug] [2024-02-03T15:15:52.214Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-02-03T15:15:52.214Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-03T15:15:52.214Z] > authorizing via signed-in user (aleks@olo.land)
+[debug] [2024-02-03T15:15:52.214Z] [iam] checking project ololand2 for permissions ["firebase.projects.get"]
+[debug] [2024-02-03T15:15:52.215Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions [none]
+[debug] [2024-02-03T15:15:52.215Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:15:52.215Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-03T15:15:52.434Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions 200
+[debug] [2024-02-03T15:15:52.434Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-02-03T15:15:59.081Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ololand2/releases pageSize=10&pageToken=
+[debug] [2024-02-03T15:15:59.668Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ololand2/releases 200
+[debug] [2024-02-03T15:15:59.668Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ololand2/releases {"releases":[{"name":"projects/ololand2/releases/cloud.firestore","rulesetName":"projects/ololand2/rulesets/70d54add-f8e5-4fcf-819d-6685ece1696c","createTime":"2024-02-03T15:15:23.847906Z","updateTime":"2024-02-03T15:15:23.847906Z"}]}
+[debug] [2024-02-03T15:15:59.668Z] Found ruleset: projects/ololand2/rulesets/70d54add-f8e5-4fcf-819d-6685ece1696c
+[debug] [2024-02-03T15:15:59.669Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ololand2/rulesets/70d54add-f8e5-4fcf-819d-6685ece1696c [none]
+[debug] [2024-02-03T15:15:59.824Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ololand2/rulesets/70d54add-f8e5-4fcf-819d-6685ece1696c 200
+[debug] [2024-02-03T15:15:59.825Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ololand2/rulesets/70d54add-f8e5-4fcf-819d-6685ece1696c [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-02-03T15:16:02.186Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-02-03T15:16:02.187Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-02-03T15:16:02.596Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-02-03T15:16:02.596Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-02-03T15:16:03.141Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-02-03T15:16:03.141Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ololand2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/ololand2/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-02-03T15:16:03.143Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-03T15:16:03.144Z] > authorizing via signed-in user (aleks@olo.land)
+[debug] [2024-02-03T15:16:03.144Z] [iam] checking project ololand2 for permissions ["firebase.projects.get"]
+[debug] [2024-02-03T15:16:03.144Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions [none]
+[debug] [2024-02-03T15:16:03.144Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:16:03.144Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-03T15:16:03.389Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions 200
+[debug] [2024-02-03T15:16:03.389Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ololand2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-03T15:16:03.389Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-02-03T15:16:03.389Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:16:03.390Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-02-03T15:16:03.390Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:16:03.720Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com 200
+[debug] [2024-02-03T15:16:03.721Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-02-03T15:16:03.721Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-02-03T15:16:03.721Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:16:03.886Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/runtimeconfig.googleapis.com 200
+[debug] [2024-02-03T15:16:03.887Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-02-03T15:16:04.371Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-02-03T15:16:04.371Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-02-03T15:16:14.375Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-02-03T15:16:14.376Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ololand2
+[debug] [2024-02-03T15:16:14.898Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com 200
+[debug] [2024-02-03T15:16:14.899Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ololand2/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-02-03T15:16:41.049Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 [none]
+[debug] [2024-02-03T15:16:41.490Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 200
+[debug] [2024-02-03T15:16:41.490Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ololand2 {"projectId":"ololand2","projectNumber":"1081382661331","displayName":"ololand2","name":"projects/ololand2","resources":{"hostingSite":"ololand2","realtimeDatabaseInstance":"ololand2-default-rtdb"},"state":"ACTIVE","etag":"1_e7cdfa58-d694-45cd-a3d5-85af89702711"}
+[info] 
+[info] i  Detected a .git folder at /Users/aleks 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=371703112&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-02-03T15:20:55.248Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-02-03T15:20:55.250Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-02-03T15:20:55.567Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-02-03T15:20:55.568Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-02-03T15:20:55.578Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-02-03T15:20:55.911Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-02-03T15:20:55.911Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"aniebyl","id":3195144,"node_id":"MDQ6VXNlcjMxOTUxNDQ=","avatar_url":"https://avatars.githubusercontent.com/u/3195144?v=4","gravatar_id":"","url":"https://api.github.com/users/aniebyl","html_url":"https://github.com/aniebyl","followers_url":"https://api.github.com/users/aniebyl/followers","following_url":"https://api.github.com/users/aniebyl/following{/other_user}","gists_url":"https://api.github.com/users/aniebyl/gists{/gist_id}","starred_url":"https://api.github.com/users/aniebyl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/aniebyl/subscriptions","organizations_url":"https://api.github.com/users/aniebyl/orgs","repos_url":"https://api.github.com/users/aniebyl/repos","events_url":"https://api.github.com/users/aniebyl/events{/privacy}","received_events_url":"https://api.github.com/users/aniebyl/received_events","type":"User","site_admin":false,"name":"ololand","company":"OLO LLC","blog":"","location":"San Carlos","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":13,"public_gists":0,"followers":0,"following":2,"created_at":"2013-01-05T22:04:24Z","updated_at":"2024-01-19T23:54:41Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":1018,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as aniebyl 
+[info] 
